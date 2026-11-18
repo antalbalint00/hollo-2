@@ -1,0 +1,13 @@
+# Minden fájl a tároló gyökerében van: index.html (felület), api.mjs (szerverfunkció)
+[build]
+  publish = "."
+  functions = "."
+
+[functions]
+  node_bundler = "esbuild"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
